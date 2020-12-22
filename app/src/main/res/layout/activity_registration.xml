@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#404040"
+    android:orientation="vertical"
+    tools:context=".RegistrationActivity">
+
+    <EditText
+        android:id="@+id/registrationMobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:drawableRight="@drawable/mobile"
+        android:ems="10"
+        android:hint="Enter Mobile Number"
+        android:inputType="phone"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/registrationPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:drawableRight="@drawable/password"
+        android:ems="10"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/registrationPasswordConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:drawableRight="@drawable/password"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/registrationName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:drawableRight="@drawable/user"
+        android:ems="10"
+        android:hint="Enter Name"
+        android:inputType="text"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/registrationAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:drawableRight="@drawable/address"
+        android:ems="10"
+        android:hint="Enter Address"
+        android:inputType="text"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/registrationSignupButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="80dp"
+        android:background="#0055DD"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Sign Up"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp" />
+</LinearLayout>
