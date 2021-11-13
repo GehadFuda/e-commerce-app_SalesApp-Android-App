@@ -22,7 +22,7 @@ class RegistrationActivity : AppCompatActivity() {
                     .equals(registrationPasswordConfirm.text.toString())
             ) {
                 var url =
-                    "http://192.168.1.125/SalesWeb/add_user.php?mobile=" +
+                    "https://sales-app123.000webhostapp.com/SalesWeb/add_user.php?mobile=" +
                             registrationMobile.text.toString() + "&password=" +
                             registrationPassword.text.toString() + "&name=" +
                             registrationName.text.toString() + "&address=" +

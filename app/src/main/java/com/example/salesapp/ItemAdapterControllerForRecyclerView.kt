@@ -36,7 +36,7 @@ class ItemAdapterControllerForRecyclerView(
         fun bind(name: String, price: Double, photoName: String,item_id:Int) {
             itemView.itemName.text = name
             itemView.itemPrice.text = price.toString()
-            var web:String="http://192.168.1.125/SalesWeb/images/" + photoName
+            var web:String="https://sales-app123.000webhostapp.com/SalesWeb/images/" + photoName
             web=web.replace(" ","%20")
             Picasso.with(itemView.context).load(web)
                 .into(itemView.itemPhoto)

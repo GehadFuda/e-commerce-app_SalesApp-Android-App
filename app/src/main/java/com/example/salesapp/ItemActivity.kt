@@ -18,12 +18,12 @@ class ItemActivity : AppCompatActivity() {
         setContentView(R.layout.activity_item)
 
         var category: String = intent.getStringExtra("category")
-        var url = "http://192.168.1.125/SalesWeb/get_items.php?category=" + category
+        var url = "https://sales-app123.000webhostapp.com/SalesWeb/get_items.php?category=" + category
         var arrayList = ArrayList<ItemModelForRecyclerView>()
 
         var requestQueue: RequestQueue = Volley.newRequestQueue(this)
         var jsonArrayRequest =
-            JsonArrayRequest(Request.Method.GET, url, null, Response.Listener { response ->
+            JsonArrayRequest(Request.Method.GET, url, null, { response ->
                 for (x in 0..response.length() - 1)
                     arrayList.add(
                         ItemModelForRecyclerView(
@@ -39,7 +39,7 @@ class ItemActivity : AppCompatActivity() {
                 var adapter = ItemAdapterControllerForRecyclerView(this, arrayList)
                 itemRecyclerView.layoutManager = LinearLayoutManager(this)
                 itemRecyclerView.adapter = adapter
-            }, Response.ErrorListener { error ->
+            }, { error ->
                 Toast.makeText(this, error.message, Toast.LENGTH_SHORT).show()
             })
         requestQueue.add(jsonArrayRequest)

@@ -17,7 +17,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        var url = "http://192.168.1.125/SalesWeb/get_categories.php"
+        var url = "https://sales-app123.000webhostapp.com/SalesWeb/get_categories.php"
         var arrayList = ArrayList<String>()
         var requestQueue: RequestQueue = Volley.newRequestQueue(this)
         var jsonArrayRequest =

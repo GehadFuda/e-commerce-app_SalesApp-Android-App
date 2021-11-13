@@ -3,6 +3,7 @@ package com.example.salesapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import com.android.volley.Request
 import com.android.volley.RequestQueue
@@ -25,13 +26,13 @@ class MainActivity : AppCompatActivity() {
 
             /*for using GET method*/
 //            var url =
-//                "http://192.168.1.125/SalesWeb/login.php?mobile=" +
+//                "https://sales-app123.000webhostapp.com/SalesWeb/login.php?mobile=" +
 //                        loginMobile.text.toString() + "&password=" +
 //                        loginPassword.text.toString()
 //            var requestQueue: RequestQueue = Volley.newRequestQueue(this)
 
             /*for using POST method*/
-            var url = "http://192.168.1.125/SalesWeb/login.php"
+            var url = "https://sales-app123.000webhostapp.com/SalesWeb/login.php"
 
             var requestQueue: RequestQueue = Volley.newRequestQueue(this)
 
@@ -62,6 +63,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 }, Response.ErrorListener { error ->
                     Toast.makeText(this, error.message, Toast.LENGTH_LONG).show()
+                    Log.i("error", error.message)
                 }) {
                     override fun getParams(): MutableMap<String, String> {
                         var hashMap = HashMap<String, String>()

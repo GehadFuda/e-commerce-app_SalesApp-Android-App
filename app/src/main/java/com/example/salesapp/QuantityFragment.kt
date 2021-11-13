@@ -50,7 +50,7 @@ class QuantityFragment : DialogFragment() {
         var button = variable.findViewById<Button>(R.id.buttonQuantity)
 
         button.setOnClickListener {
-            var url = "http://192.168.1.125/SalesWeb/add_temporary_order.php?mobile=" +
+            var url = "https://sales-app123.000webhostapp.com/SalesWeb/add_temporary_order.php?mobile=" +
                     UserInfo.mobile + "&item_id=" + UserInfo.itemId + "&quantity=" + editText.text.toString()
             var requestQueue: RequestQueue = Volley.newRequestQueue(activity)
             var stringRequest =

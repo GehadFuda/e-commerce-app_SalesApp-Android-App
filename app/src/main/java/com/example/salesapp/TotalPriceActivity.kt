@@ -26,7 +26,7 @@ class TotalPriceActivity : AppCompatActivity() {
         setContentView(R.layout.activity_total_price)
 
         var url =
-            "http://192.168.1.125/SalesWeb/get_total_price.php?bill_no=" + intent.getStringExtra("bill_no")
+            "https://sales-app123.000webhostapp.com/SalesWeb/get_total_price.php?bill_no=" + intent.getStringExtra("bill_no")
         var requestQueue: RequestQueue = Volley.newRequestQueue(this)
         var stringRequest =
             StringRequest(Request.Method.GET, url, Response.Listener { response ->
